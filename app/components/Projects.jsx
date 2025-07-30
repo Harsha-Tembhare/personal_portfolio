@@ -24,8 +24,16 @@ const Projects = () => {
           <div key={idx} className="bg-slate-700 p-6 rounded-lg shadow-md">
             <h3 className="text-xl font-semibold mb-2">{proj.name}</h3>
             <p className="text-gray-300 mb-4">{proj.description}</p>
-            <a href={proj.live} className="text-blue-400 hover:underline mr-4">Live Demo</a>
-            <a href={proj.github} className="text-blue-400 hover:underline">GitHub</a>
+            {proj.live && proj.live !== '#' ? (
+              <a href={proj.live} className="text-blue-400 hover:underline mr-4" target="_blank" rel="noopener noreferrer">Live Demo</a>
+            ) : (
+              <span className="text-gray-400 mr-4">Live Demo Coming Soon</span>
+            )}
+            {proj.github && proj.github !== '#' ? (
+              <a href={proj.github} className="text-blue-400 hover:underline" target="_blank" rel="noopener noreferrer">GitHub</a>
+            ) : (
+              <span className="text-gray-400">GitHub Coming Soon</span>
+            )}
           </div>
         ))}
       </div>

@@ -7,7 +7,7 @@ import Skills from './components/Skills';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
-function App() {
+function Home() {
   return (
     <div className="bg-slate-900 text-white font-sans min-h-screen">
       <Header/>
@@ -20,4 +20,4 @@ function App() {
   );
 }
 
-export default App;
+export default Home;
